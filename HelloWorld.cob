@@ -6,7 +6,7 @@
 000600 procedure division.
 000700
 000800 program-begin.
-000900 display "Hello, World!".
+000900     display "Hello, World!".
 001000 stop run.
 001100 program-end.
 001200
