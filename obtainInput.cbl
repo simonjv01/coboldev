@@ -8,10 +8,8 @@
        01 name pic a(20).
 
        procedure division.
-      
-      
-      *> cobol-lint CL002 0100-start
-             0100-start.
+      *> cobol-lint CL002 0100-start-here
+               0100-start-here.
                 display "Enter your name: ".
                 accept name.
                 display "Hello, " name "!".
