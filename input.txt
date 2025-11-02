@@ -1,0 +1,10 @@
+10001John Smith          45000.00
+10002Mary Johnson        52000.00
+10003Robert Williams     48500.00
+10004Patricia Brown      55000.00
+10005Michael Jones       61000.00
+10006Jennifer Davis      47500.00
+10007William Miller      53000.00
+10008Linda Wilson        49000.00
+10009David Moore         58000.00
+10010Barbara Taylor      51500.00
