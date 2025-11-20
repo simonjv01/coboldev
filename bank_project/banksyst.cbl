@@ -24,9 +24,11 @@
                05 ws-account-balance     pic 9(7)v99.
            01 ws-amount                  pic 9(7)v99.
            01 ws-transaction-type        pic x(1).
-              88 ws-deposit            value 'D'.
-              88 ws-withdrawal         value 'W'.
-              88 ws-check-balance       value 'B'.
+              88 ws-deposit              value 'D'.
+              88 ws-withdrawal           value 'W'.
+              88 ws-check-balance        value 'B'.
+           01 ws-tc-switch               pic x(1) value 'N'.
+              88 transaction-completed   value 'Y'
        procedure division.
            stop run.
 
