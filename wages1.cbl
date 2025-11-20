@@ -24,6 +24,7 @@
                      DISPLAY "Wages are: " WAGES
                      DISPLAY "Do you want to enter more data (Yes/No): "
                      ACCEPT MORE-DATA
+                END-IF
               END-PERFORM
        STOP RUN.    
        
