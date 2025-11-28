@@ -7,10 +7,10 @@
        INPUT-OUTPUT SECTION.
       
        FILE-CONTROL.
-      
-           SELECT CUSTMAST ASSIGN TO CUSTMAST.
-           SELECT SALESRPT ASSIGN TO SALESRPT.
-      
+
+           SELECT CUSTMAST ASSIGN TO '/Users/simonvargas/CUSTMAST.DAT'.
+           SELECT SALESRPT ASSIGN TO '/Users/simonvargas/SALESRPT.DAT'.
+
        DATA DIVISION.
       
        FILE SECTION.
@@ -27,7 +27,7 @@
       
        FD  SALESRPT.
       
-       01  PRINT-AREA      PIC X(132).
+       01  PRINT-AREA      PIC X(133).
       
        WORKING-STORAGE SECTION.
       
@@ -53,6 +53,7 @@
            05  FILLER          PIC X(9).
       
        01  HEADING-LINE-1.
+           05  FILLER          PIC X(1).        
            05  FILLER          PIC X(7)    VALUE "DATE:  ".
            05  HL1-MONTH       PIC 9(2).
            05  FILLER          PIC X(1)    VALUE "/".
@@ -62,11 +63,12 @@
            05  FILLER          PIC X(11)   VALUE SPACE.
            05  FILLER          PIC X(20)   VALUE "YEAR-TO-DATE SALES R".
            05  FILLER          PIC X(20)   VALUE "EPORT               ".
-           05  FILLER          PIC X(8)    VALUE "  PAGE: ".
+           05  FILLER          PIC X(8)    VALUE " PAGE: ".
            05  Hl1-PAGE-NUMBER PIC ZZZ9.
            05  FILLER          PIC X(52)   VALUE SPACE.
       
        01  HEADING-LINE-2.
+           05  FILLER          PIC X(1).
            05  FILLER          PIC X(7)    VALUE "TIME:  ".
            05  HL2-HOURS       PIC 9(2).
            05  FILLER          PIC X(1)    VALUE ":".
@@ -76,18 +78,21 @@
            05  FILLER          PIC X(52)   VALUE SPACE.
       
        01  HEADING-LINE-3.
+           05  FILLER      PIC X(1).
            05  FILLER      PIC X(20)   VALUE "CUST                ".
            05  FILLER      PIC X(20)   VALUE "            SALES   ".
            05  FILLER      PIC X(20)   VALUE "      SALES         ".
            05  FILLER      PIC X(72)   VALUE SPACE.
       
        01  HEADING-LINE-4.
+           05  FILLER      PIC X(1).
            05  FILLER      PIC X(20)   VALUE "NUM    CUSTOMER NAME".
            05  FILLER      PIC X(20)   VALUE "           THIS YTD ".
            05  FILLER      PIC X(20)   VALUE "     LAST YTD       ".
            05  FILLER      PIC X(72)   VALUE SPACE.
       
        01  CUSTOMER-LINE.
+           05  FILLER              PIC X(1).
            05  CL-CUSTOMER-NUMBER  PIC 9(5).
            05  FILLER              PIC X(2)     VALUE SPACE.
            05  CL-CUSTOMER-NAME    PIC X(20).
