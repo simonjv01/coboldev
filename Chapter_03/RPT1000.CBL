@@ -111,6 +111,7 @@
       
        PROCEDURE DIVISION.
       
+      *> cobol-lint CL002 000-prepare-sales-report
        000-PREPARE-SALES-REPORT.
       
            OPEN INPUT  CUSTMAST
@@ -172,7 +173,7 @@
            MOVE HEADING-LINE-4 TO PRINT-AREA.
            WRITE PRINT-AREA AFTER ADVANCING 1 LINES.
            MOVE ZERO TO LINE-COUNT.
-           MOVE 2 TO SPACE-CONTROL.
+           MOVE 1 TO SPACE-CONTROL.
       
        300-PRINT-GRAND-TOTALS.
       
